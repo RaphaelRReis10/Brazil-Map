@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!---------------------------------------------------------------------------------------------->
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Brazil Map</title>
+
+    <!--CSS Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!--CSS do Projeto-->
+    <link rel="stylesheet" href="style.css" />
+    <!--JQuery 3.6-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!--JS Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <!----------------------------------------------------------------------------------------------->
+  <body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <div class="container">
+        <h1 class="navbar-brand">
+          Brazil Map
+          <img
+            src="img/brasil.png"
+            alt="Logo"
+            width="35"
+            height="35"
+            class="d-inline-block align-text-top logo"
+            id="img"
+          />
+        </h1>
+      </div>
+    </nav>
+
+    <!--Map&Text-->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <img src="img/mapa.jpg" class="map" alt="map" />
+        </div>
+
+        <div class="col-12 col-md-6">
+          <h1>Brazil: A Mosaic of Regions and States</h1>
+          <p>
+            Brazil, a nation of continental proportions, is composed of five
+            distinct geographical regions. The North, dominated by the majestic
+            Amazon Rainforest, harbors immense biodiversity. In the Northeast,
+            stunning beaches intermingle with historic cities, witnesses to the
+            colonial past. The Central-West stands out with its vast plains and
+            unique Pantanal ecosystem. In the Southeast, bustling urban centers
+            combine with beautiful natural landscapes, such as Rio de Janeiro's
+            beaches and the Atlantic Forest. In the South, European influence is
+            visible in both cities and traditions.
+          </p>
+          <p>
+            The country is subdivided into 27 states, each with its own
+            particularities. São Paulo, the most populous state, is an economic
+            and cultural hub. Amazonas houses the majority of the Brazilian
+            Amazon. Bahia, in the Northeast, is rich in Afro-Brazilian culture
+            and history. Minas Gerais is famous for its mountains and historical
+            wealth. Rio Grande do Sul, in the South, stands out with its unique
+            traditions and cuisine.
+          </p>
+          <p>
+            In each region and state, Brazil presents itself as a diverse and
+            multifaceted nation, where geography, culture, and history
+            intertwine to form a country of singular proportions.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--Regions-->
+    <div class="col-12 col-md-12 offset-md-1" id="regions">
+      <div class="row">
+        <div class="col-12 col-md-2">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title Northern">North</h5>
+              <p class="card-text">Amazon, our natural wealth.</p>
+              <a class="btn-states btn btn-dark" region="N">See the states</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-2">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title Northeast">North East</h5>
+              <p class="card-text">Sun, sea, culture, and joy.</p>
+              <a class="btn-states btn btn-dark" region="NE">See the states</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-2">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title Southeast">Southeast</h5>
+              <p class="card-text">Diversity and prosperity.</p>
+              <a class="btn-states btn btn-dark" region="SE">See the states</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-2">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title Central">Midwest</h5>
+              <p class="card-text">Exuberant nature and growth.</p>
+              <a class="btn-states btn btn-dark" region="CO">See the states</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-2">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title Southern">South</h5>
+              <p class="card-text">Innovation, and beauty.</p>
+              <a class="btn-states btn btn-dark" region="S">See the states</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Modal STATES -->
+    <div class="modal" id="statesModal">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4>States</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <h4 class="modal-title" id="regionTitle"></h4>
+            <h5 id="countTitle"></h5>
+            <div class="col-12 col-md-12 offset-md-1" id="regions">
+              <div class="row rowModal" id="state-modal-body"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- The Modal CITIES -->
+    <div class="modal" id="citiesModal">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4>Cities</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <h4 class="modal-title" id="state-title"></h4>
+            <h5 id="count-city-title"></h5>
+            <div class="col-12 col-md-12 offset-md-1" id="states">
+              <div class="row rowModal" id="city-modal-body"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--CloneCard-->
+    <div class="hidden">
+      <a
+        class="link-dark"
+        id="clone-link"
+        href="https://www.google.com/search?q=Ibirité"
+        target="_blank"
+      >
+        Ibirité - 6924981231389
+      </a>
+      <div class="col-12 col-md-3" id="cloneCard">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Minas Gerais</h5>
+            <a class="btn-cities btn btn-dark" state="MG">See the cities</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--SCRIPT-->
+    <script src="javaScript.js"></script>
+  </body>
+</html>

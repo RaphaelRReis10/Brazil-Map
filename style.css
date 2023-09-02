@@ -1,0 +1,90 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    height: 3.75em;
+    margin-bottom: 0;
+}
+
+.container-fluid{
+    background-color: black;
+}
+
+.navbar-brand{
+     color: white;
+     margin-left: 40%;
+     font-size: 1.875em;
+     text-shadow: gray 0.0625em 0.0625em;
+     font-family: 'Times New Roman', Times, serif;
+     
+}
+
+.logo{
+    border-radius: 50%;
+}
+
+.map{
+    width: 31.25em;
+    height: 31.25em;
+}
+
+.title{
+    text-align: center;
+    padding: 0.625em;
+    color: red;
+}
+.container h1{
+    text-align: center;
+    font-size: 1.875em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    font-size: 0.9375em;
+    padding: 3.125em;
+    }
+
+/* REGIONS BUTTON */
+#regions{
+    margin-bottom: 4em;
+}
+
+#regions .card{
+    padding: 2em 0.3em;
+    margin-bottom: 1em;
+   
+}
+
+#regions .btn{
+    margin-top: 1.5em;
+    padding: 0.6em 1.2em;
+}
+
+#regions .Northeast{
+    color:blue;
+}
+#regions .Northern{
+    color:green;
+}
+#regions .Central{
+color:purple;
+}
+#regions .Southeast{
+color: red;
+}
+#regions .Southern{
+    color:rgb(198, 198, 0);
+
+}
+.rowModal{
+    width: 80%;
+   }
+.hidden{
+    display: none;
+}
+
+
