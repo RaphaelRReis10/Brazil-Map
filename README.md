@@ -36,4 +36,11 @@ Siga estas etapas para usar a aplicação:
 
 ## Tecnologias Utilizadas
 
-- A aplicação "Brazil Map" utiliza a API Brasil para obter informações sobre regiões, estados e cidades do Brasil.
+- API Brasil
+- HTML5
+- CSS3
+- JavaScript
+
+## Frameworks:
+- Bootstrap 5
+- JQuery 3.4
