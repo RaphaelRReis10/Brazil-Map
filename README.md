@@ -1,5 +1,3 @@
-# TestePratico-Jabil
-
 # Brazil Map
 
 A *Brazil Map* é uma aplicação web que permite aos usuários explorar informações sobre as regiões, estados e cidades do Brasil. Com esta aplicação, você pode facilmente descobrir a quantidade de estados por região, quais são esses estados, e também a quantidade de cidades por estado, suas respectivas denominações e códigos do IBGE.
