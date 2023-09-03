@@ -20,7 +20,7 @@ $(document).ready(function() {
         let estados = estadosObj.filter(estado => estado.regiao.sigla == siglaRegion)
         let countTitleText = estados.length + " States Found"
         $("#countTitle").html(countTitleText)
-        let regionTitleText = $(event.target).parent().find("h5").html() //parente = card (pai do botao)
+        let regionTitleText = $(event.target).parent().find("h5").html()
         $("#regionTitle").html(regionTitleText)
         $("#state-modal-body").html("")
 
@@ -43,7 +43,7 @@ $(document).ready(function() {
                 timeout: 0,
             }
         
-            $.ajax(settings).done(function(response) { //REQUISIÇÃO
+            $.ajax(settings).done(function(response) { 
    
                 let citiesObj = response
                 let countTitleTextCities = citiesObj.length + " Cities Found"
@@ -56,7 +56,7 @@ $(document).ready(function() {
                     link.removeAttr("id")
                     let hrefLink = "https://www.google.com/search?q=" + citiesObj[i].nome
                     let htmlLink = citiesObj[i].nome + " - " + citiesObj[i].codigo_ibge
-                    link.attr("href", hrefLink)  // SETANDO hreflink dentro do atributo href 
+                    link.attr("href", hrefLink)   
                     link.html(htmlLink)
                     $("#city-modal-body").append(link)
                     
