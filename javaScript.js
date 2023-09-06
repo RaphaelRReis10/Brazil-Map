@@ -5,7 +5,7 @@ $(document).ready(function() {
     let citiesModal = new bootstrap.Modal($("#citiesModal"))
 
     var settings = {
-        url: "https://brasilapi.com.br/api/ibge/uf/v1/",
+        url: "https://brasilapi.com.br/api/ibge/uf/v1",
         method: "GET",
         timeout: 0,
     }
